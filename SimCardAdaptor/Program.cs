@@ -10,6 +10,11 @@ namespace SimCardAdaptor
     {
         static void Main(string[] args)
         {
+            SmartPhone smartPhone = new SmartPhone();
+            NanoSIMCard nanoSımCard = new NanoSIMCard();
+            smartPhone.SimCardSocket.Insert(nanoSımCard);
+
+            Console.ReadKey();
         }
     }
 }

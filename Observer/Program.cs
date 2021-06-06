@@ -10,6 +10,23 @@ namespace Observer
     {
         static void Main(string[] args)
         {
+            IObserver gazete = new Gazete();
+            IObserver internet = new Internet();
+
+            Kredi ihtiyacKredisi = new Kredi();
+
+            ihtiyacKredisi.RegisterObserver(gazete);
+            ihtiyacKredisi.RegisterObserver(internet);
+            ihtiyacKredisi.SetFaizOrani(1.15f);
+
+            ihtiyacKredisi.RemoveObserver(internet);
+            ihtiyacKredisi.SetFaizOrani(1.35f);
+
+            ihtiyacKredisi.RemoveObserver(gazete);
+            ihtiyacKredisi.SetFaizOrani(1.0f);
+
+            Console.ReadLine();
+
         }
     }
 }

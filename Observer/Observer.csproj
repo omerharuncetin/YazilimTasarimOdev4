@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gazete.cs" />
+    <Compile Include="Internet.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="ISubject.cs" />
+    <Compile Include="Kredi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
